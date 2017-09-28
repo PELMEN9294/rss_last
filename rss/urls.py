@@ -18,6 +18,7 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^demo/', include('rss.apps.bootstrap4_demo.urls')),
     url(r'^rss_news/', include('rss.apps.rss_news.urls')),
+    url(r'^admin/', admin.site.urls),
 ]
