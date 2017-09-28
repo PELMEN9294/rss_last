@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
-    'rss.apps.bootstrap4_demo',
     'rss.apps.rss_news',
 ]
 
