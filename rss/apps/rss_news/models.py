@@ -1,3 +1,11 @@
 from django.db import models
 
 # Create your models here.
+
+class News(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    title = models.TextField()
+    text = models.TextField()
+
+    def __str__(self):
+        return str(self.id) + "_" + str(self.title)
