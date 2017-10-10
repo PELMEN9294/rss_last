@@ -5,9 +5,11 @@ from rss.apps.rss_news.models import News
 # Create your views here.
 
 def index(request):
-    news = News.title
+    news = News.objects.all()
 
-    context = {"news": news}
+    context = {
+                "news": news
+               }
 
     return render(request, "index.html", context)
 

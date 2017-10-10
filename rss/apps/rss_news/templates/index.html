@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8">
-    {% for n in news %}
-        <title>{% n %}</title>
+        <meta charset="UTF-8">
+        <title>{{ news }}</title>
 </head>
 <body>
-
+        {% for n in news %}
+            <h1>
+                {{ n.title }}
+            </h1>
+            <p>
+                {{ n.text }}
+            </p>
+        {% endfor %}
 </body>
 </html>
