@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django import forms
 from rss.apps.rss_news.models import News
-#from django.http import HttpResponse
+from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
@@ -10,10 +10,15 @@ def index(request):
     context = {
                 "title": news.title,
                 "text": news.text,
-                "id": news.id
+                "id": news.id,
                }
 
     return render(request, "index.html", context)
+
+def post(request, post):
+
+    return HttpResponse(post)
+
 
 def button(request):
 

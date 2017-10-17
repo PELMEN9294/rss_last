@@ -1,7 +1,8 @@
 from django.conf.urls import url
-from .views import index, button
+from . import views
 
 urlpatterns = [
-    url(r'^index', index),
-    url(r'^button', button),
+    url(r'^index', views.index),
+    url(r'^post/(?P<post>[0-9]+)/$', views.post),
+    url(r'^button', views.button),
 ]
