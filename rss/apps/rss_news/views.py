@@ -8,7 +8,9 @@ def index(request):
     news = News.objects.all()
 
     context = {
-                "news": news
+                "title": news.title,
+                "text": news.text,
+                "id": news.id
                }
 
     return render(request, "index.html", context)

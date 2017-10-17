@@ -7,7 +7,7 @@ from .views import HomePageView, FormHorizontalView, FormInlineView, PaginationV
     DefaultFormView, MiscView, DefaultFormsetView, DefaultFormByFieldView
 
 urlpatterns = [
-    url(r'^$', HomePageView.as_view(), name='home'),
+    url(r'^home$', HomePageView.as_view(), name='home'),
     url(r'^formset$', DefaultFormsetView.as_view(), name='formset_default'),
     url(r'^form$', DefaultFormView.as_view(), name='form_default'),
     url(r'^form_by_field$', DefaultFormByFieldView.as_view(), name='form_by_field'),
