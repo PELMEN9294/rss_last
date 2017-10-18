@@ -4,7 +4,7 @@ from django.db import models
 
 class News(models.Model):
     id = models.BigIntegerField(primary_key=True)
-    title = models.TextField()
+    title = models.TextField(max_length=50)
     text = models.TextField()
 
     def __str__(self):
